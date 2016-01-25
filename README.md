@@ -6,10 +6,8 @@
 [![Node version](https://img.shields.io/node/v/async-each-map.svg "Node version")](https://www.npmjs.com/package/async-each-map)
 [![Dependency status](https://img.shields.io/david/Starefossen/node-async-each-map.svg "Dependency status")](https://david-dm.org/Starefossen/node-async-each-map)
 
-Node.JS wrapper for various (undocumented) API from the Norwegian Broadcast
-Corporation (NRK). Since NRK does not publicly document any of their APIs, this
-effort is by analyzing source code of various NRK.no sites, GitHub and other
-search engines, as well as analyzing traffic from various NRK applications.
+Efficient, light wegith, dependency free NPM package for doing asyncronous each,
+map, and reduce operations in Node.js.
 
 ## Requirements
 
