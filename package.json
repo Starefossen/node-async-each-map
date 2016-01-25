@@ -4,7 +4,7 @@
   "description": "Dependency free async each, map, and reduce written in ES6 package for Node.js",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint index.js test/",
+    "lint": "eslint index.js test/ examples/",
     "test": "mocha -c --check-leaks -R tap test.js",
     "watch": "mocha -w -b -c --check-leaks -R progress test.js",
     "semantic-release": "semantic-release"
