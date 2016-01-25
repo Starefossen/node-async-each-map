@@ -12,14 +12,14 @@ function fsExists(file, cb) {
   });
 }
 
-const files = [
+const list = [
   'examples/file0.txt',
   'examples/file1.txt',
   'exmaples/file3.txt',
   'examples/file2.txt',
 ];
 
-each(files, fsExists, (err, files) => {
+each(list, fsExists, (err, files) => {
   if (err) { throw err; }
 
   for (const file of files) {

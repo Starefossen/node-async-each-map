@@ -6,12 +6,12 @@
 const each = require('../index');
 const fs = require('fs');
 
-const files = [
+const list = [
   'examples/file1.txt',
   'examples/file2.txt',
 ];
 
-each(files, fs.readFile, (err, files) => {
+each(list, fs.readFile, (err, files) => {
   if (err) { throw err; }
 
   files.forEach((content, i) => {
