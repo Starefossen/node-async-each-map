@@ -15,6 +15,6 @@ each(list, fs.readFile, (err, files) => {
   if (err) { throw err; }
 
   files.forEach((content, i) => {
-    console.log(`file${i+1}.txt`, content.toString('utf8'));
+    console.log(`file${i + 1}.txt`, content.toString('utf8'));
   });
 });
