@@ -1,0 +1,39 @@
+{
+  "name": "async-each-map",
+  "version": null,
+  "description": "Dependency free async each, map, and reduce written in ES6 package for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js test/",
+    "test": "mocha -c --check-leaks -R tap test.js",
+    "watch": "mocha -w -b -c --check-leaks -R progress test.js",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Starefossen/node-async-each-map.git"
+  },
+  "keywords": [
+    "ES6",
+    "async",
+    "array",
+    "each",
+    "map",
+    "reduce"
+  ],
+  "author": "Hans Kristian Flaatten <hans@starefossen.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Starefossen/node-async-each-map/issues"
+  },
+  "homepage": "https://github.com/Starefossen/node-async-each-map#readme",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^3.1.0",
+    "mocha": "^2.3.4",
+    "semantic-release": "^4.3.5"
+  }
+}
