@@ -115,3 +115,49 @@ describe('reduce', function describe() {
     });
   });
 });
+
+describe('example', function describe() {
+  it('check-files.js returns existing files', function it(done) {
+    const child = spawn('examples/check-files.js');
+
+    const output = [
+      'examples/file1.txt exists!\n',
+      'examples/file2.txt exists!\n',
+    ];
+
+    let i = 0;
+
+    child.stdout.on('data', (data) => {
+      assert.equal(data.toString('utf8'), output[i++]);
+    });
+
+    child.stderr.on('data', assert.fail.bind(assert));
+
+    child.on('close', (code) => {
+      assert.equal(code, 0);
+      done();
+    });
+  });
+
+  it('map-files.js returns content of files', function it(done) {
+    const child = spawn('examples/map-files.js');
+
+    const output = [
+      'file1.txt foo\n\n',
+      'file2.txt bar\n\n',
+    ];
+
+    let i = 0;
+
+    child.stdout.on('data', (data) => {
+      assert.equal(data.toString('utf8'), output[i++]);
+    });
+
+    child.stderr.on('data', assert.fail.bind(assert));
+
+    child.on('close', (code) => {
+      assert.equal(code, 0);
+      done();
+    });
+  });
+});
