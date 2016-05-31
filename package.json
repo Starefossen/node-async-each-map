@@ -49,5 +49,8 @@
     "mocha": "^2.5.3",
     "nsp": "^2.4.0",
     "semantic-release": "^4.3.5"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   }
 }
