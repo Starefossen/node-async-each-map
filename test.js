@@ -4,16 +4,16 @@ const assert = require('assert');
 const spawn = require('child_process').spawn;
 const each = require('./');
 
-describe('each', function describe() {
-  it('returns immediately for empty array', function it(done) {
+describe('each', () => {
+  it('returns immediately for empty array', done => {
     each([], assert.fail, done);
   });
 
-  it('returns immediately for null array', function it(done) {
+  it('returns immediately for null array', done => {
     each(null, assert.fail, done);
   });
 
-  it('calls each element in order', function it(done) {
+  it('calls each element in order', done => {
     const arr = [1, 9, 3, 10, 13, 14, 19, 6, 3, 2];
 
     let i = 0;
@@ -24,11 +24,11 @@ describe('each', function describe() {
     }, done);
   });
 
-  it('accepts optionak done callback', function it() {
+  it('accepts optionak done callback', () => {
     each([2, 3, 4, 5], (item, next) => { next(); });
   });
 
-  it('accepts a BIG array', function (done) {
+  it('accepts a BIG array', done => {
     const arr = Array.from(Array(10000).keys());
     let i = 0;
 
@@ -39,11 +39,10 @@ describe('each', function describe() {
       done();
     });
   });
-
 });
 
-describe('map', function describe() {
-  it('returns empty array for empty array', function it(done) {
+describe('map', () => {
+  it('returns empty array for empty array', done => {
     each([], assert.fail, (err, arr) => {
       assert.ifError(err);
       assert.deepEqual(arr, []);
@@ -52,7 +51,7 @@ describe('map', function describe() {
     });
   });
 
-  it('returns empty array for null array', function it(done) {
+  it('returns empty array for null array', done => {
     each(null, assert.fail, (err, arr) => {
       assert.ifError(err);
       assert.deepEqual(arr, []);
@@ -61,7 +60,7 @@ describe('map', function describe() {
     });
   });
 
-  it('returns mapped array', function it(done) {
+  it('returns mapped array', done => {
     each([3, 5, 2, 9], (item, next) => {
       next(null, item * item);
     }, (err, arr) => {
@@ -73,8 +72,8 @@ describe('map', function describe() {
   });
 });
 
-describe('reduce', function describe() {
-  it('returns rediced empty array', function it(done) {
+describe('reduce', () => {
+  it('returns rediced empty array', done => {
     each([3, 2, 6, 7, 3, 2, 1], (item, next) => {
       next();
     }, (err, arr) => {
@@ -85,7 +84,7 @@ describe('reduce', function describe() {
     });
   });
 
-  it('returns reduced array', function it(done) {
+  it('returns reduced array', done => {
     each([3, 5, 2, 9, 8], (item, next) => {
       if (item % 2 === 0) {
         next(null, item);
@@ -100,7 +99,7 @@ describe('reduce', function describe() {
     });
   });
 
-  it('returns map reduced array', function it(done) {
+  it('returns map reduced array', done => {
     each([3, 5, 2, 9, 8], (item, next) => {
       if (item % 3 === 0) {
         next(null, item * item);
@@ -116,8 +115,8 @@ describe('reduce', function describe() {
   });
 });
 
-describe('example', function describe() {
-  it('check-files.js returns existing files', function it(done) {
+describe('example', () => {
+  it('check-files.js returns existing files', done => {
     const child = spawn('examples/check-files.js');
 
     const output = [
@@ -139,7 +138,7 @@ describe('example', function describe() {
     });
   });
 
-  it('map-files.js returns content of files', function it(done) {
+  it('map-files.js returns content of files', done => {
     const child = spawn('examples/map-files.js');
 
     const output = [

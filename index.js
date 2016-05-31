@@ -12,7 +12,7 @@ module.exports = function each(arr, iterator, callback) {
   const map = [];
 
   function next() {
-    iterator(arr[i], function nextCb(err, item) {
+    iterator(arr[i], (err, item) => {
       if (err) {
         done(err);
       } else {
@@ -29,5 +29,5 @@ module.exports = function each(arr, iterator, callback) {
     });
   }
 
-  next();
+  return next();
 };
