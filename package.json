@@ -3,6 +3,11 @@
   "version": null,
   "description": "Dependency free async each, map, and reduce written in ES6 package for Node.js",
   "main": "index.js",
+  "files": [
+    "examples",
+    "index.js",
+    "test.js"
+  ],
   "scripts": {
     "lint": "eslint index.js test/ examples/",
     "test": "mocha -c --check-leaks -R tap test.js",
