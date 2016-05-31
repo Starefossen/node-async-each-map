@@ -16,7 +16,7 @@
     "semantic-release": "semantic-release",
     "test": "mocha -bc --check-leaks -R tap test.js",
     "test:watch": "mocha -wbc --check-leaks -R progress test.js",
-    "postpublish": "greenkeeper-postpublish"
+    "greenkeeper-postpublish": "greenkeeper-postpublish"
   },
   "repository": {
     "type": "git",

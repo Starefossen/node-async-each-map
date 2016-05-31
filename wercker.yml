@@ -46,6 +46,10 @@ deploy:
     - turistforeningen/npm-publish
 
     - script:
+        name: greenkeeper postpublish hook
+        code: npm run greenkeeper-postpublish
+
+    - script:
         name: semantic release post
         code: npm run semantic-release -- post
 
