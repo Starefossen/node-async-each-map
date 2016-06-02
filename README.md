@@ -1,7 +1,8 @@
 # Async; Each, Map, Reduce
 
 [![Build status](https://img.shields.io/wercker/ci/56a5c21f090a9b0d1d03e152.svg "Build status")](https://app.wercker.com/project/bykey/ea2f7fef7cf5cc63c7c4c50405a77b4d)
-[![Codacy](https://img.shields.io/codacy/63ff3a4fec73469d9be8e2ffdb489c7f.svg "Codacy")](https://www.codacy.com/app/starefossen/node-node-async-each-map)
+[![Codacy grade](https://img.shields.io/codacy/grade/63ff3a4fec73469d9be8e2ffdb489c7f.svg "Codacy grade")](https://www.codacy.com/app/starefossen/node-node-async-each-map)
+[![Codacy coverage](https://img.shields.io/codacy/coverage/63ff3a4fec73469d9be8e2ffdb489c7f.svg "Codacy coverage")](https://www.codacy.com/app/starefossen/node-node-async-each-map)
 [![NPM downloads](https://img.shields.io/npm/dm/async-each-map.svg "NPM downloads")](https://www.npmjs.com/package/async-each-map)
 [![NPM version](https://img.shields.io/npm/v/async-each-map.svg "NPM version")](https://www.npmjs.com/package/async-each-map)
 [![Node version](https://img.shields.io/node/v/async-each-map.svg "Node version")](https://www.npmjs.com/package/async-each-map)
