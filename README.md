@@ -11,10 +11,6 @@
 Efficient, light wegith, dependency free NPM package for doing asyncronous each,
 map, and reduce operations in Node.js.
 
-## Requirements
-
-* Node.JS >= v4.0.0
-
 ## Install
 
 ```
